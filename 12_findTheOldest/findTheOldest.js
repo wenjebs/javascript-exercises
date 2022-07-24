@@ -4,7 +4,7 @@ const findTheOldest = function(people) {
 
     // calculate ages and put in array
     let ages = people.map(function(person) {
-        // check if the person still living
+        // check if the person still living, if he is get his age
         if (!person.yearOfDeath) {
             return currentYear - person.yearOfBirth;
         }
@@ -15,7 +15,7 @@ const findTheOldest = function(people) {
     ages.sort()
     let oldestAge = ages[ages.length-1];
 
-    // find the person with tat age
+    // find the person with oldest age  and return
     let findPerson = people.find(person => {
         // if still alive, get the age and check with oldest age
         if (!person.yearOfDeath) {
